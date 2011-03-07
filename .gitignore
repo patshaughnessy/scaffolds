@@ -1,0 +1,15 @@
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/*
+public/system
+*.DS_Store
+coverage/*
+*.swp
+*~
+rerun.txt
+tags
+!.keep
+tmp/bundler
+.rvmrc
+pkg/*

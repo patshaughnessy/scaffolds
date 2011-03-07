@@ -1,0 +1,3 @@
+=Scaffold templates for http://scaffoldhub.org
+
+See {http://scaffoldhub.org}[http://scaffoldhub.org] for more information.
