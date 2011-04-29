@@ -10,7 +10,7 @@ Scaffoldhub::Specification.new do
   metadata do
 
     # A short paragraph describing what this scaffold does
-    description 'The paperclip scaffold.'
+    description 'Upload/download file attachments with the Paperclip gem.'
 
     # 4x3 aspect ratio screen shot
     screenshot 'paperclip_screenshot.png'

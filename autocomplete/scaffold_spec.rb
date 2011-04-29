@@ -10,7 +10,7 @@ Scaffoldhub::Specification.new do
   metadata do
 
     # A short paragraph describing what this scaffold does
-    description 'The autocomplete scaffold.'
+    description 'Standard Rails scaffolding with JQuery autocomplete on a selected text field. Indicate which text field in the scaffold parameter.'
 
     # 4x3 aspect ratio screen shot
     screenshot 'autocomplete_screenshot.png'
