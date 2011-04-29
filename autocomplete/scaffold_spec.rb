@@ -1,7 +1,7 @@
 Scaffoldhub::Specification.new do
 
   # Github URL where you will post your scaffold - the speciied folder must contain this file
-  base_url  'http://localhost/github/autocomplete'
+  base_url  'https://github.com/patshaughnessy/scaffolds/tree/master/autocomplete'
 
   # The name of your new scaffold: should be a single word
   name 'autocomplete'

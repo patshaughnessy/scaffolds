@@ -1,7 +1,7 @@
 Scaffoldhub::Specification.new do
 
   # Github URL where you will post your scaffold - the speciied folder must contain this file
-  base_url  'http://localhost/github/paperclip'
+  base_url  'https://github.com/patshaughnessy/scaffolds/tree/master/paperclip'
 
   # The name of your new scaffold: should be a single word
   name 'paperclip'
