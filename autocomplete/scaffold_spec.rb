@@ -23,9 +23,6 @@ Scaffoldhub::Specification.new do
     parameter_example 'FIELD_NAME'
   end
 
-  # Optionally post a link to an article you write explaining how the scaffold works.
-  blog_post 'http://patshaughnessy.net/2011/3/13/view-mapper-for-rails-3-scaffoldhub'
-
   # Define a model template - this ERB file will be used to generate a new
   # model class with this path & filename: app/models/NAME.rb
   model 'templates/model.rb'
@@ -40,12 +37,17 @@ Scaffoldhub::Specification.new do
 
   # You can use "with_options" to specify the same source folder for a series of templates:
   with_options :src => 'templates' do
+
+    # Define a view template - this ERB file will be used to generate a new
+    # view file with this path: app/views/PLURAL_NAME/...
     view '_form.html.erb'
     view 'new.html.erb'
     view 'edit.html.erb'
     view 'index.html.erb'
     view 'show.html.erb'
-    view 'layout.erb', :dest => 'app/views/layouts'
+
+    # The layout file needs a different dest folder and file name
+    template 'layout.erb', :dest => 'app/views/layouts', :rename => 'PLURAL_NAME.html.erb'
   end
 
   with_options :src => 'templates/jquery', :dest => 'public/javascripts' do
