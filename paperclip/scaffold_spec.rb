@@ -25,6 +25,9 @@ Scaffoldhub::Specification.new do
   # Optionally post a link to an article you write explaining how the scaffold works.
   blog_post 'http://patshaughnessy.net/2011/3/13/view-mapper-for-rails-3-scaffoldhub'
 
+  # Add the paperclip gem to the Gemfile
+  gem 'paperclip'
+
   # Define a model template - this ERB file will be used to generate a new
   # model class with this path & filename: app/models/NAME.rb
   model 'templates/model.rb'
