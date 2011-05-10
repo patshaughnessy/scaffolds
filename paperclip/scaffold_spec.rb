@@ -20,10 +20,10 @@ Scaffoldhub::Specification.new do
 
     # Optionally specify an example of a scaffold parameter
     parameter_example 'ATTACHMENT_NAME'
-  end
 
-  # Optionally post a link to an article you write explaining how the scaffold works.
-  blog_post 'http://patshaughnessy.net/2011/3/13/view-mapper-for-rails-3-scaffoldhub'
+    # Optionally post a link to an article you write explaining how the scaffold works.
+    blog_post 'http://patshaughnessy.net/2011/3/13/view-mapper-for-rails-3-scaffoldhub'
+  end
 
   # Add the paperclip gem to the Gemfile
   gem 'paperclip'
