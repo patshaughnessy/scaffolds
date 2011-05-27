@@ -73,4 +73,17 @@ Scaffoldhub::Specification.new do
     file 'ui-icons_ffd27a_256x240.png'
     file 'ui-icons_ffffff_256x240.png'
   end
+
+  post_install_message <<MESSAGE
+Follow these steps to use the JQuery autocomplete plugin in your
+new scaffold:
+- Run "rake db:migrate" to create your new PLURAL_NAME database table
+- Run your Rails server
+- Open http://localhost:3000/PLURAL_NAME
+... to see the index page. Now after you create a few records you will
+notice that autocomplete/type ahead behavior will work for the
+SCAFFOLD_PARAMETER field, matching the records you already saved into
+the database.
+MESSAGE
+
 end

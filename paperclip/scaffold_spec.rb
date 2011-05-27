@@ -48,4 +48,14 @@ Scaffoldhub::Specification.new do
     view 'index.html.erb'
     view 'show.html.erb'
   end
+
+  post_install_message <<MESSAGE
+To upload and download file attachments in your new scaffold:
+- Run "rake db:migrate" to create your new PLURAL_NAME database table
+- Run your Rails server
+- Open http://localhost:3000/PLURAL_NAME
+... to see the index page. Now when you create or edit a NAME record
+you will see a browse button appear for selecting a file attachment.
+MESSAGE
+
 end

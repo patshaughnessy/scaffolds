@@ -39,4 +39,12 @@ Scaffoldhub::Specification.new do
     view 'index.html.erb'
     view 'show.html.erb'
   end
+
+  post_install_message <<MESSAGE
+This works the same as the default Rails scaffold generator:
+- Run "rake db:migrate" to create your new PLURAL_NAME database table
+- Run your Rails server
+- Open http://localhost:3000/PLURAL_NAME
+... to see the index page.
+MESSAGE
 end
