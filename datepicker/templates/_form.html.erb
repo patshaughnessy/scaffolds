@@ -1,0 +1,32 @@
+<%%= form_for(@<%= singular_table_name %>) do |f| %>
+  <%% if @<%= singular_table_name %>.errors.any? %>
+    <div id="error_explanation">
+      <h2><%%= pluralize(@<%= singular_table_name %>.errors.count, "error") %> prohibited this <%= singular_table_name %> from being saved:</h2>
+
+      <ul>
+      <%% @<%= singular_table_name %>.errors.full_messages.each do |msg| %>
+        <li><%%= msg %></li>
+      <%% end %>
+      </ul>
+    </div>
+  <%% end %>
+
+<% for attribute in attributes -%>
+  <div class="field">
+    <%%= f.label :<%= attribute.name %> %><br />
+    <% if attribute.name == scaffold_parameter %>
+      <%%= f.text_field :<%= attribute.name %> %>
+    <% else %>
+      <%%= f.<%= attribute.field_type %> :<%= attribute.name %> %>
+    <% end %>
+  </div>
+<% end -%>
+  <div class="actions">
+    <%%= f.submit %>
+  </div>
+<%% end %>
+<script>
+  var date_field = $("#<%= singular_table_name %>_<%= scaffold_parameter %>");
+  date_field.datepicker({ defaultDate: date_field.val(), dateFormat: 'yy-mm-dd' });
+</script>
+
