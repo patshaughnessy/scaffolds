@@ -27,7 +27,7 @@ App.Views.Edit = Backbone.View.extend({
     },
     
     render: function() {
-        $(this.el).html(JST.document({ model: this.model }));
+        $(this.el).html(JST.<%= name %>({ model: this.model }));
         $('#app').html(this.el);
         
         // use val to fill in title, for security reasons
