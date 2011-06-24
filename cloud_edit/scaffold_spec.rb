@@ -9,6 +9,8 @@ Scaffoldhub::Specification.new do
     screenshot 'cloud_edit_screenshot.png'
     tag 'backbone'
     tag 'ajax'
+    tag 'jquery'
+    tag 'jammit'
     blog_post 'http://www.jamesyu.org/2011/01/27/cloudedit-a-backbone-js-tutorial-by-example'
   end
 
