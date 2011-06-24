@@ -4,7 +4,7 @@ App.Views.Index = Backbone.View.extend({
     },
     
     render: function() {
-        $(this.el).html(JST.documents_collection({ collection: this.collection }));
+        $(this.el).html(JST.<%= plural_name %>_collection({ collection: this.collection }));
         $('#app').html(this.el);
     }
 });

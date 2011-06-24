@@ -3,7 +3,7 @@ var App = {
     Controllers: {},
     Collections: {},
     init: function() {
-        new App.Controllers.Documents();
+        new App.Controllers.<%= controller_class_name %>();
         Backbone.history.start();
     }
 };

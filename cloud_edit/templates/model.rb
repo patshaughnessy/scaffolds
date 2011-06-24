@@ -1,4 +1,4 @@
-class Document < ActiveRecord::Base
+class <%= class_name %> < ActiveRecord::Base
   attr_accessible :body, :title
   
   def to_json(options = {})

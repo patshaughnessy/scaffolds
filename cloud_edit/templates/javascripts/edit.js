@@ -16,7 +16,7 @@ App.Views.Edit = Backbone.View.extend({
         this.model.save({ title: this.$('[name=title]').val(), body: this.$('[name=body]').val() }, {
             success: function(model, resp) {
                 new App.Views.Notice({ message: msg });
-                Backbone.history.saveLocation('documents/' + model.id);
+                Backbone.history.saveLocation('<%= plural_name %>/' + model.id);
             },
             error: function() {
                 new App.Views.Error();

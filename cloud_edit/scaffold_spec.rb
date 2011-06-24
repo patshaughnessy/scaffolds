@@ -28,7 +28,7 @@ Scaffoldhub::Specification.new do
       template 'edit.js',         :dest => 'views'
       template 'index.js',        :dest => 'views'
       template 'notice.js',       :dest => 'views'
-      file 'application.js'
+      template 'application.js',  :dest => ''
       file 'backbone.js'
       file 'underscore.js'
       file 'jquery-1.4.4.min.js'
