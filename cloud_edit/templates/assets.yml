@@ -15,4 +15,4 @@ javascripts:
 stylesheets:
   app:
     - public/stylesheets/reset.css
-    - public/stylesheets/*.css
+    - public/stylesheets/cloud_edit.css
