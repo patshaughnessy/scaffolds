@@ -2,9 +2,10 @@ Scaffoldhub::Specification.new do
 
   base_url  'https://github.com/patshaughnessy/scaffolds/tree/master/cloud_edit'
   name 'cloud_edit'
+  parameter_example 'LINK_FIELD'
 
   metadata do
-    description "Get started using backbone.js with Rails by installing the code from James Yu's fantastic tutorial right inside your app."
+    description "Get started using backbone.js with Rails by installing the code from James Yu's fantastic tutorial right inside your app. Specify which field to use for links as the scaffold parameter."
     screenshot 'cloud_edit_screenshot.png'
     tag 'backbone'
     tag 'ajax'
