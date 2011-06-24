@@ -43,7 +43,7 @@ Scaffoldhub::Specification.new do
     end
 
     with_options :src => 'stylesheets', :dest => 'public/stylesheets' do
-      file 'scaffold.css'
+      file 'cloud_edit.css'
       file 'reset.css'
     end
   end
