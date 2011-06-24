@@ -4,7 +4,7 @@ Scaffoldhub::Specification.new do
   name 'cloud_edit'
 
   metadata do
-    description "Get started using backbone.js with Rails by installing the code from James Yu's tutorial right inside your app."
+    description "Get started using backbone.js with Rails by installing the code from James Yu's fantastic tutorial right inside your app."
     screenshot 'cloud_edit_screenshot.png'
     tag 'backbone'
     tag 'ajax'
