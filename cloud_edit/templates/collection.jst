@@ -1,7 +1,7 @@
 <%% if(collection.models.length > 0) { %>
     <h3><a href='#new'>Create New</a></h3><ul>
     <%% collection.each(function(item) { %>
-        <li><a href='#<%= plural_name %>/<%%= item.id %>'><%%= item.escape('title') %></a></li>
+        <li><a href='#<%= plural_name %>/<%%= item.id %>'><%%= item.escape('<%= scaffold_parameter %>') %></a></li>
     <%% }); %>
     </ul>
 <%% } else { %>

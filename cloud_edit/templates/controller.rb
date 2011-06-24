@@ -14,7 +14,7 @@ class <%= controller_class_name %>Controller < ApplicationController
   end
 
   def update
-    <%= name %> = Document.find(params[:id])
+    <%= name %> = <%= class_name %>.find(params[:id])
     <%= name %>.update_attributes! params
     respond_with <%= name %>
   end

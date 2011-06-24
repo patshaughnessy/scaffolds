@@ -1,9 +1,8 @@
 <form>
-    <label for='title'>Title</label>
-    <input name='title' type='text' />
-    
-    <label for='body'>Body</label>
-    <textarea name='body'><%%= model.get('body') %></textarea>
+<% attributes.each do |attribute| -%>
+    <label for='<%= attribute.name %>'><%= attribute.name.titleize %></label>
+    <input name='<%= attribute.name %>' type='text' />
+<% end %>
     
     <button><%%= model.isNew() ? 'Create' : 'Save' %></button>
 </form>

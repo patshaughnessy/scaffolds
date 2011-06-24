@@ -13,7 +13,7 @@ App.Views.Edit = Backbone.View.extend({
         var self = this;
         var msg = this.model.isNew() ? 'Successfully created!' : "Saved!";
         
-        this.model.save({ title: this.$('[name=title]').val(), body: this.$('[name=body]').val() }, {
+        this.model.save({ <%= attributes.collect { |a| "#{a.name}: this.$('[name=#{a.name}]').val()" }.join(", ") %> }, {
             success: function(model, resp) {
                 new App.Views.Notice({ message: msg });
                 Backbone.history.saveLocation('<%= plural_name %>/' + model.id);
@@ -29,9 +29,10 @@ App.Views.Edit = Backbone.View.extend({
     render: function() {
         $(this.el).html(JST.<%= name %>({ model: this.model }));
         $('#app').html(this.el);
-        
-        // use val to fill in title, for security reasons
-        this.$('[name=title]').val(this.model.get('title'));
+
+        <% attributes.each do |attribute| -%>
+        this.$('[name=<%= attribute.name %>]').val(this.model.get('<%= attribute.name %>'));
+        <% end %>
         
         this.delegateEvents();
     }
