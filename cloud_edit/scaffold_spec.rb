@@ -4,7 +4,7 @@ Scaffoldhub::Specification.new do
   name 'cloud_edit'
 
   metadata do
-    description "The sample app from James Yu's fantastic Rails/Backbone.js tutorial: this scaffold will install James's code, along with backbone.js, underscore.js and related into your app."
+    description "Get started using backbone.js with Rails by installing the code from James Yu's tutorial right inside your app."
     screenshot 'cloud_edit_screenshot.png'
     tag 'backbone'
     tag 'ajax'
@@ -49,6 +49,7 @@ Scaffoldhub::Specification.new do
 
   post_install_message <<MESSAGE
 Follow these steps to run James's sample code in your app:
+- "bundle install" to install the jammit gem and dependencies
 - Run "rake db:migrate" to create your new PLURAL_NAME database table
 - Run your Rails server
 - Open http://localhost:3000/PLURAL_NAME
